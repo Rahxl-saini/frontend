@@ -1,23 +1,44 @@
-*<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Details</title>
+    <title>Dynamic Blog Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>My Dynamic Blog</h1>
+        <p>Read from our blog.</p>
+    </header>
 
-    <h1>Student Details</h1>
+    <main class="container">
+        <section class="controls">
+            <input
+                type="search"
+                id="search"
+                placeholder="Search blog posts by title..."
+            >
+<button id="reloadButton" type="button">
+    Reload Posts
+</button>
+</section>
 
-    <p id="name"></p>
-    <p id="age"></p>
-    <p id="isStudent"></p>
-    <p id="subjects"></p>
-    <p id="city"></p>
-    <p id="state"></p>
-    <p id="greet"></p>
+<p
+    id="statusMessage"
+    role="status"
+    aria-live="polite"
+>
+    Loading posts...
+</p>
 
-    <script src="main.js"></script>
+<section
+    id="postsContainer"
+    class="posts-grid"
+></section>
+</main>
+
+<script src="script.js" defer></script>
 </body>
 </html>
-*
